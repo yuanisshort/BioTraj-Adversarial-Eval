@@ -28,9 +28,20 @@
 * **意义：** 成功去除了 100% 的碎片化噪声，为下游的缺口识别（YOLO/OpenCV）提供了纯净的输入数据。
 
 <div align="center">
-    <img src="docs/images/restore_compare.png" width="80%" alt="图像重构前后对比">
+    <img src="1.jpg" width="80%" alt="图像重构前">
     <br>
-    <em>图1：原始乱序切片 (左) vs 拓扑重构后的完整图像 (右)</em>
+    <em>图1：原始乱序切片</em>
+</div>
+<div align="center">
+    <img src="new_img.jpg" width="80%" alt="图像重构后">
+    <br>
+    <em>图2：拓扑重构后的完整图像</em>
+</div>
+
+<div align="center">
+    <img src="docs/屏幕截图 2026-02-20 220322.png" width="80%" alt="yolo识别">
+    <br>
+    <em>图3：yolo识别框</em>
 </div>
 
 ### 2. 基于动力学的仿生轨迹生成 (Biomimetic Trajectory)
@@ -47,11 +58,11 @@
 <div align="center">
     <img src="docs/images/trajectory_vis.png" width="80%" alt="轨迹速度曲线分析">
     <br>
-    <em>图2：仿生轨迹的速度分布曲线（蓝色）展现出与真实人类高度相似的抖动特征</em>
+    <em>图4：仿生轨迹的速度分布曲线（蓝色）展现出与真实人类高度相似的抖动特征</em>
 </div>
 
 ---
-
+逆向思路可以参考链接：https://www.52pojie.cn/thread-1940566-1-1.html
 ## 🛠️ 技术架构与代码结构
 
 本项目采用模块化设计，模拟了完整的对抗测试流程：
@@ -67,3 +78,4 @@
 ├── main.py                 # 程序主入口
 ├── requirements.txt        # 项目依赖
 └── README.md               # 项目文档
+
