@@ -71,7 +71,8 @@
 .
 ├── core/
 │   ├── trajectory.py       # 轨迹生成算法 (核心：Ease-Out Expo + 随机噪声)
-│   ├── image_processor.py  # 图像处理与逆向重构 (Canvas 还原)
+│   ├── 接口.py  # 识别图像缺口的api
+│   ├──image_processor.py  # 图像处理与逆向重构 (Canvas 还原)
 │   └── slide_match.py      # 缺口识别 (基于 OpenCV/YOLO)
 ├── encryption/             # JS 逆向协议封装 (w参数生成与加密)
 ├── analysis/               # 轨迹数据分析与可视化
@@ -79,3 +80,4 @@
 ├── requirements.txt        # 项目依赖
 └── README.md               # 项目文档
 
+启动前先运行接口.py,然后运行main脚本就能绕过滑块
